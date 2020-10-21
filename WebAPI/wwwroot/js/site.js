@@ -43,7 +43,7 @@ function LoadTable() {
                         .append($("<td></td>").text(item.colour))
                         .append($("<td></td>").text(item.year))
                         .append($("<td></td>")
-                            .append($("<a href='#editVehicle' class='edit' data-toggle='modal'>Edit</a>")
+                            .append($("<a href='#editVehicleModal' class='edit' data-toggle='modal'>Edit</a>")
                                 .on("click",
                                     function () {
                                         editItem(item.id);
@@ -52,7 +52,7 @@ function LoadTable() {
                         )
                         .append(
                             $("<td></td>").append(
-                                $("<a href='#deleteItem' class='delete btn btn-danger'> <i class='material - icons'>&#xE15C;</i><span>Delete</span></a>").on("click",
+                                $("<a href='#deleteItem' class='delete'> <i class='material - icons'>&#xE15C;</i><span>Delete</span></a>").on("click",
                                     function () {
                                         deleteItem(item.id);
                                     }) //in an empty cell add in a deleteitem button

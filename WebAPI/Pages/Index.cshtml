@@ -4,46 +4,48 @@
     ViewData["Title"] = "Home page";
 }
 <p></p>
-<div class="container-fluid">
+<div class="container-xl">
     <div class="table-responsive">
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-3">
-                    <h1>Vehicle Inventory</h1>
-                </div>
-                <div class="col-sm-3">
-                    <div class="search-box">
-                        <div class="input-group">
-                            <input type="text" id="search" class="form-control" placeholder="Search by Regastration">
-                            <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Vehicle Inventory</h1>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="search-box">
+                            <div class="input-group">
+                                <input type="text" id="search" class="form-control" placeholder="Search by Regastration">
+                                <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div>
-                    <a href="#AddVehicleModal" class="btn btn-success" data-toggle="modal">
-                        <i class="material-icons">&#xE147;</i> <span>Add New Vehicle</span>
-                    </a>
+                    <div>
+                        <a href="#AddVehicleModal" class="btn btn-success" data-toggle="modal">
+                            <i class="material-icons">&#xE147;</i> <span>Add New Vehicle</span>
+                        </a>
+                        </div>
                 </div>
             </div>
+
+            <table class="table table-bordered table-striped table-hover table-responsive-md">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Reg</th>
+                        <th>Make</th>
+                        <th>Model</th>
+                        <th>Colour</th>
+                        <th>Year</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="allVehicles"></tbody>
+            </table>
         </div>
-        <table class="table table-bordered table-striped table-hover">
-            <thead class="thead-light">
-            <tr>
-                <th>Reg</th>
-                <th>Make</th>
-                <th>Model</th>
-                <th>Colour</th>
-                <th>Year</th>
-                <th></th>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody id="allVehicles"></tbody>
-        </table>
     </div>
 </div>
-</div>
+
 <div id="AddVehicleModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -84,15 +86,15 @@
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="edit-id">
-                    <input class="form-control" type="text" id="edit-reg" />
-                    <br />
-                    <input class="form-control" type="text" id="edit-make" />
-                    <br />
-                    <input class="form-control" type="text" id="edit-model" />
-                    <br />
-                    <input class="form-control" type="text" id="edit-colour" />
-                    <br />
-                    <input class="form-control" type="number" id="edit-year" />
+                    <input class="form-control" type="text" id="edit-reg"/>
+                    <br/>
+                    <input class="form-control" type="text" id="edit-make"/>
+                    <br/>
+                    <input class="form-control" type="text" id="edit-model"/>
+                    <br/>
+                    <input class="form-control" type="text" id="edit-colour"/>
+                    <br/>
+                    <input class="form-control" type="number" id="edit-year"/>
                 </div>
                 <div class="form-group" id="resultUpdate"></div>
                 <div class="modal-footer">
