@@ -7,7 +7,7 @@ let allVehicles = null; //holds the data in a global
 
 //Loads up the <p id="counter"> </p> with a count of the staff, data come from the LoadTable Function where this is called
 function getCount(data) {
-   // alert("getcount " + data);
+    // alert("getcount " + data);
 
     const theCount = $("#counter"); //bind TheCount to the counter
 

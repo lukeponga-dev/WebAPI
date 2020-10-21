@@ -105,6 +105,7 @@ namespace WebAPI.Controllers
 
             return vehicle;
         }
+
         //Checks the vehicle using a lamda
         private bool VehicleExists(int id)
         {

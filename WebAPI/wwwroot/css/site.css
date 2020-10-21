@@ -9,7 +9,9 @@ a.navbar-brand {
 
 /* Provide sufficient contrast against white background */
 
-a { color: #0366d6; }
+a {
+    color: #0366d6;
+}
 
 .btn-primary {
     color: #fff;
@@ -26,17 +28,27 @@ a { color: #0366d6; }
 /* Sticky footer styles
 -------------------------------------------------- */
 
-html { font-size: 14px; }
-
-@media (min-width: 768px) {
-    html { font-size: 16px; }
+html {
+    font-size: 14px;
 }
 
-.border-top { border-top: 1px solid #e5e5e5; }
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
 
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
 
 button.accept-policy {
     font-size: 1rem;
@@ -328,46 +340,46 @@ table.table .avatar {
     float: right;
 }
 
-.search-box .input-group {
-    min-width: 300px;
-    position: absolute;
-    right: 0;
-}
+    .search-box .input-group {
+        min-width: 300px;
+        position: absolute;
+        right: 0;
+    }
 
-.search-box .input-group-addon, .search-box input {
-    border-color: #ddd;
-    border-radius: 0;
-}
+    .search-box .input-group-addon, .search-box input {
+        border-color: #ddd;
+        border-radius: 0;
+    }
 
-.search-box input {
-    height: 34px;
-    padding-right: 35px;
-    background: #f4fcfd;
-    border: none;
-    border-radius: 2px !important;
-}
+    .search-box input {
+        height: 34px;
+        padding-right: 35px;
+        background: #f4fcfd;
+        border: none;
+        border-radius: 2px !important;
+    }
 
-.search-box input:focus {
-    background: #fff;
-}
+        .search-box input:focus {
+            background: #fff;
+        }
 
-.search-box input::placeholder {
-    font-style: italic;
-}
+        .search-box input::placeholder {
+            font-style: italic;
+        }
 
-.search-box .input-group-addon {
-    min-width: 35px;
-    border: none;
-    background: transparent;
-    position: absolute;
-    right: 0;
-    z-index: 9;
-    padding: 6px 0;
-}
+    .search-box .input-group-addon {
+        min-width: 35px;
+        border: none;
+        background: transparent;
+        position: absolute;
+        right: 0;
+        z-index: 9;
+        padding: 6px 0;
+    }
 
-.search-box i {
-    color: #a0a5b1;
-    font-size: 19px;
-    position: relative;
-    top: 2px;
-}
+    .search-box i {
+        color: #a0a5b1;
+        font-size: 19px;
+        position: relative;
+        top: 2px;
+    }
