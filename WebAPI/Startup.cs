@@ -26,7 +26,7 @@ namespace WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-
+            services.AddControllers();
             services.AddDbContext<WebAPI_DataContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("WebAPI_DataContext")));
         }
@@ -54,6 +54,7 @@ namespace WebAPI
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
                 endpoints.MapRazorPages();
             });
         }

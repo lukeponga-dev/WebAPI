@@ -4,7 +4,6 @@
     ViewData["Title"] = "Home page";
 }
 <p></p>
-<div class="text-center">
     <div id="services">
         <p></p>
         <div class="container">
@@ -19,7 +18,7 @@
                         <input class="form-control" type="text" id="add-make" placeholder="Add Make" />
                         <input class="form-control" type="text" id="add-model" placeholder="Add Model" />
                         <input class="form-control" type="text" id="add-colour" placeholder="Add Colour" />
-                        <input class="form-control" type="text" id="add-year" placeholder="Add Year" />
+                        <input class="form-control" type="number" id="add-year" placeholder="Add Year" />
                         <input type="submit" value="Add">
                     </form>
                     <h3>Edit Vehicle</h3>
@@ -29,7 +28,7 @@
                         <input class="form-control" type="text" id="edit-make" />
                         <input class="form-control" type="text" id="edit-model" />
                         <input class="form-control" type="text" id="edit-colour" />
-                        <input class="form-control" type="text" id="edit-year" />
+                        <input class="form-control" type="number" id="edit-year" />
                         <input type="submit" value="Save">
                     </form>
                 </div>
@@ -46,18 +45,20 @@
                             <th></th>
                         </tr>
                         <tbody id="allStaff"></tbody>
+
                     </table>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 @section Scripts {
     <script type="text/javascript">
         //run the LoadTable function when the page has loaded
-        $(document).ready(function() {
+        $(document).ready(function () {
             LoadTable();
         });
     </script>
+<script src="js/site.js"></script>
 }
+
