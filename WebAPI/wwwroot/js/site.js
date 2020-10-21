@@ -43,7 +43,7 @@ function LoadTable() {
                         .append($("<td></td>").text(item.colour))
                         .append($("<td></td>").text(item.year))
                         .append($("<td></td>")
-                            .append($("<button>Edit</button>")
+                            .append($("<a href='#editVehicle' class='edit' data-toggle='modal'>Edit</a>")
                                 .on("click",
                                     function () {
                                         editItem(item.id);
@@ -52,7 +52,7 @@ function LoadTable() {
                         )
                         .append(
                             $("<td></td>").append(
-                                $("<button>Delete</button>").on("click",
+                                $("<a href='#deleteItem' class='delete btn btn-danger'> <i class='material - icons'>&#xE15C;</i><span>Delete</span></a>").on("click",
                                     function () {
                                         deleteItem(item.id);
                                     }) //in an empty cell add in a deleteitem button
@@ -153,3 +153,22 @@ $(".my-form").on("submit", //saving the edit to the db
         });
         return false;
     });
+$(document).ready(function () {
+    // Activate tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // Filter table rows based on searched term
+    $("#search").on("keyup", function () {
+        var term = $(this).val().toLowerCase();
+        $("table tbody tr").each(function () {
+            $row = $(this);
+            var reg = $row.find("td:nth-child(1)").text().toLowerCase();
+            console.log(reg);
+            if (reg.search(term) < 0) {
+                $row.hide();
+            } else {
+                $row.show();
+            }
+        });
+    });
+});
