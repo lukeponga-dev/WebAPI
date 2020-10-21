@@ -71,29 +71,30 @@ function addItem() {
         make: $("#add-make").val(),
         model: $("#add-model").val(),
         colour: $("#add-colour").val(),
-        year: $("#add-year").val()
+        year: parseInt($("#add-year").val())
     };
 
     $.ajax({
-        type: "POST", //this calls the POST in the API controller
-        accepts: "application/json",
+        type: "POST",
         url: uri,
-        contentType: "application/json; charset-utf-8",
         data: JSON.stringify(item),
+        contentType: "application/json; charset=utf-8",
         //if it is successful
         success: function (result) {
+            $("#result").html("Vehicle Added");
             LoadTable();
             $("#add-reg").val(""); //clear entry boxes
             $("#add-make").val("");
             $("#add-model").val("");
             $("#add-colour").val("");
             $("#add-year").val();
-            alert("Staff added successfully");
-            console.log(result)
+            //alert("Staff added successfully");
+            //console.log(result)
         },
         //if there is an error
         error: function (jqXHR, textStatus, errorThrown) {
-            alert("Something went wrong!");
+            //alert("Something went wrong!");
+            $("#result").html("Failed.");
         }
     });
 }
@@ -131,19 +132,23 @@ $(".my-form").on("submit", //saving the edit to the db
             make: $("#edit-make").val(),
             model: $("#edit-model").val(),
             colour: $("#edit-colour").val(),
-            year: $("#edit-year").val(),
-            id: $("#edit-id").val()
+            year: parseInt($("#edit-year").val()),
+            id: parseInt($("#edit-id").val())
         };
 
-        alert(`Saving ... ${item.id} ${item.reg}`);
+        //alert(`Saving ... ${item.id} ${item.reg}`);
         $.ajax({
-            url: uri + "/" + $("#edit-id").val(), //add the row id to the uri
             type: "PUT", //send it to the PUT controller
-            accepts: "application/json",
-            contentType: "application/json",
+            url: uri + "/" + $("#edit-id").val(), //add the row id to the uri
             data: JSON.stringify(item), //take the item data and pass it to the serever data is moved to server
+            contentType: "application/json",
             success: function (result) {
+                $("#resultUpdate").html("Successfully Edited " + item.reg + " " + item.make);
                 LoadTable(); //load the table afresh
+            },
+            //if Failed
+            error: function (jqXHR, textStatus) {
+                $("#resultUpdate").html("Failed to edit");
             }
         });
         return false;
