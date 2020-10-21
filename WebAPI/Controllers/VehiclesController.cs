@@ -8,6 +8,7 @@ using WebAPI.Models;
 
 namespace WebAPI.Controllers
 {
+    //Api controller for vehicles
     [Route("api/[controller]")]
     [ApiController]
     public class VehiclesController : ControllerBase
@@ -20,6 +21,7 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/Vehicles
+        // //Get all vehicles using a linq query
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicle()
         {
@@ -27,6 +29,7 @@ namespace WebAPI.Controllers
         }
 
         // GET: api/Vehicles/5
+        //Gets  the vehicles details using linq
         [HttpGet("{id}")]
         public async Task<ActionResult<Vehicle>> GetVehicle(int id)
         {
@@ -43,6 +46,7 @@ namespace WebAPI.Controllers
         // PUT: api/Vehicles/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        //Update vehicles
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
         {
@@ -75,6 +79,7 @@ namespace WebAPI.Controllers
         // POST: api/Vehicles
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        //Adds an vehicle
         [HttpPost]
         public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
         {
@@ -85,6 +90,7 @@ namespace WebAPI.Controllers
         }
 
         // DELETE: api/Vehicles/5
+        //Deletes the vehicle
         [HttpDelete("{id}")]
         public async Task<ActionResult<Vehicle>> DeleteVehicle(int id)
         {
@@ -99,7 +105,7 @@ namespace WebAPI.Controllers
 
             return vehicle;
         }
-
+        //Checks the vehicle using a lamda
         private bool VehicleExists(int id)
         {
             return _context.Vehicle.Any(e => e.Id == id);
