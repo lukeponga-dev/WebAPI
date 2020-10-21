@@ -3,19 +3,19 @@
 // Write your Javascript code.
 const uri = "/api/Vehicles"; //the api as a global variable
 // alert("API " + uri);
-let allStaff = null; //holds the data in a global
+let allVehicles = null; //holds the data in a global
 
 //Loads up the <p id="counter"> </p> with a count of the staff, data come from the LoadTable Function where this is called
 function getCount(data) {
-    alert("getcount " + data);
+   // alert("getcount " + data);
 
     const theCount = $("#counter"); //bind TheCount to the counter
 
     if (data) { //if any data exists
         // alert("We have data " + data);
-        theCount.text(`There are ${data} Staff`);
+        theCount.text(`There are ${data} Vehicles`);
     } else {
-        theCount.text("There are no Staff");
+        theCount.text("There are no Vehicles");
         alert("No data");
     }
 }
@@ -27,8 +27,8 @@ function LoadTable() {
         url: uri, //the uri from the global
         cache: false, //don't cache the data in browser reloads, get a fresh copy
         success: function (data) { //if the request succeeds ....
-            const tBody = $("#allStaff"); //for the tbody bind with allstaff <tbody id = "allStaff" ></tbody >
-            allStaff = data; //pass in all the data to the global allstaff use it in Edit
+            const tBody = $("#allVehicles"); //for the tbody bind with allstaff <tbody id = "allVehicles" ></tbody >
+            allVehicles = data; //pass in all the data to the global allstaff use it in Edit
             $(tBody).empty(); //empty out old data
 
             getCount(data.length); //count for the counter function
@@ -110,9 +110,9 @@ function deleteItem(id) {
     });
 }
 
-//click event for edit button to load details into form. Go through each entry held in  allStaff and add in the one that matches the id from the click
+//click event for edit button to load details into form. Go through each entry held in  allVehicles and add in the one that matches the id from the click
 function editItem(id) {
-    $.each(allStaff,
+    $.each(allVehicles,
         function (key, item) {
             if (item.id === id) { //where the ID == the one on the click
                 $("#edit-reg").val(item.reg); //add it to the form field
