@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "reg": "LPN791",
+    "make": "Mazda",
+    "model": "Rx8",
+    "colour": "Black",
+    "year": 2003
+  },
+  {
+    "id": 2,
+    "reg": "EJS784",
+    "make": "Audi",
+    "model": "A4",
+    "colour": "Blue",
+    "year": 1998
+  },
+  {
+    "id": 3,
+    "reg": "Mewwwo",
+    "make": "Tesla",
+    "model": "3",
+    "colour": "White",
+    "year": 2019
+  },
+  {
+    "id": 4,
+    "reg": "CCRAIG",
+    "make": "Tesla",
+    "model": "S",
+    "colour": "Grey",
+    "year": 2020
+  }
+]

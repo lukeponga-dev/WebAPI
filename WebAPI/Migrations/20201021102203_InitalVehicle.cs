@@ -22,6 +22,7 @@ namespace WebAPI.Migrations
                 {
                     table.PrimaryKey("PK_Vehicle", x => x.Id);
                 });
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -10,5 +10,6 @@ namespace WebAPI.Data
         }
 
         public DbSet<WebAPI.Models.Vehicle> Vehicle { get; set; }
+
     }
 }
