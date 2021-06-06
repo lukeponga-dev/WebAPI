@@ -11,6 +11,11 @@
 
 9. After migration is successful Run the project
 
+## Using api
+GET Vehicles
+- api/vehicles/
+
+- api/vehicles/15
 
 
 
