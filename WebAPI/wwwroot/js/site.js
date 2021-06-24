@@ -64,7 +64,7 @@ function LoadTable() {
     });
 }
 
-//Add an person to the database
+//Add an car to the database
 function addItem() {
     const item = {
         reg: $("#add-reg").val(),

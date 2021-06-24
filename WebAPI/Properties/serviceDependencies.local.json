@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myserverdbserver/databases/WebAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:WebAPI_DataContext",
+      "secretStore": "LocalSecretsFile"
+    }
+  }
+}
