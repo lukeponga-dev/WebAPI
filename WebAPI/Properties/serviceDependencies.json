@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "WebAPI_DataContext"
-    },
     "mssql2": {
       "type": "mssql",
       "connectionId": "ConnectionStrings:WebAPI_DataContext"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "WebAPI_DataContext"
     }
   }
 }

@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/myserverdbserver/databases/WebAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:WebAPI_DataContext",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
