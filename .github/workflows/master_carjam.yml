@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.301'
+        dotnet-version: '5.0.x'
         include-prerelease: true
 
     - name: Build with dotnet
@@ -53,5 +53,5 @@ jobs:
       with:
         app-name: 'carjam'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2b43caa2c043479896f564a5aac9a28a }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_a6c0c3a7c1d642d7a962757a734a38b4 }}
         package: .
