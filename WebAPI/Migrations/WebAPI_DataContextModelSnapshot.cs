@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebAPI.Data;
+using WebAPI.Models;
 
 namespace WebAPI.Migrations
 {
@@ -12,6 +13,19 @@ namespace WebAPI.Migrations
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<Vehicle>().HasData(
+                new Vehicle
+                {
+                    Id = 1,
+                    Reg = "LPN791",
+                    Make = "Mazda",
+                    Model = "Rx8",
+                    Colour = "Black",
+                    Year = 2003
+
+                }
+            );
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.9")
@@ -19,31 +33,32 @@ namespace WebAPI.Migrations
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("WebAPI.Models.Vehicle", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int")
+                    .HasAnnotation("SqlServer:ValueGenerationStrategy",
+                        SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Colour")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Colour")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Make")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Make")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Model")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Model")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Reg")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Reg")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
+                b.Property<int>("Year")
+                    .HasColumnType("int");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Vehicle");
-                });
+                b.ToTable("Vehicle");
+            });
 #pragma warning restore 612, 618
         }
     }
