@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Vehicles CRUD API";
 }
-<p class="text-center" id="counter"></p>
+<p></p>
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
@@ -39,12 +39,11 @@
                     <th></th>
                 </tr>
             </thead>
-            <tbody  id="allVehicles"></tbody>
+            <tbody id="allVehicles"></tbody>
         </table>
     </div>
 </div>
-
-<div id="AddVehicleModal" class="modal fade">
+=<div id="AddVehicleModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
@@ -103,9 +102,9 @@
         </div>
     </div>
 </div>
-
 @section Scripts {
     <script>
+
         //run the LoadTable function when the page has loaded
         $(document).ready(function () {
             LoadTable();
